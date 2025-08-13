@@ -1,0 +1,11 @@
+<Adicionar>:
+    orientation: 'vertical'
+    Button:
+        text: 'Clique'
+        font_size: 30
+        on_release: texto.text = str(int(texto.text)+1)
+
+    Label:
+        id: texto
+        font_size: 30
+        text: '1'

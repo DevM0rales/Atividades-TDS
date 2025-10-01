@@ -9,6 +9,7 @@ def calcular_frete(distancia_km, peso_kg, tipo_entrega):
     """
 
     tabela_precos = [10.00, 15.50, 20.00]
+    custo_base = 0
     
     if not 0 <= tipo_entrega <= 2:
         return "Erro: Tipo de entrega inválido."
@@ -23,9 +24,6 @@ def calcular_frete(distancia_km, peso_kg, tipo_entrega):
         custo_peso = 0.05
     
     custo_total = custo_base + custo_peso
-    
-    if distancia_km > 100 and tipo_entrega == 1:
-        return tabela_precos[2]
     
     return custo_total
 print(f"Cenário 1: {calcular_frete(50, 15, 0)}")

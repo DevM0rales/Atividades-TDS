@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="card">
+        <h2>Cadastro</h2>
+        <form id="formCadastro" onsubmit="validarFormulario()">
+            <input type="text" id="nome" name="nome" placeholder="Nome*">
+            <input type="email" id="email" name="email" placeholder="email*">
+            <input type="password" id="senha" name="senha" placeholder="Senha*">
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone*">
+            <input type="number" id="idade" name="idade" placeholder="Idade*">
+
+            <div class="actions">
+                <input type="submit" value="Cadastrar" onsubmit=enviarFormulario()>
+                <button type="button" onclick=limparFormulario()>Limpar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    function validarFormulario() {
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
+        let senha = document.getElementById("senha").value;
+        let telefone = document.getElementById("telefone").value;
+        let idade = document.getElementById("idade").value;
+
+        if (nome === "" || email === "" || senha === "") {
+            alert("Por favor, preencha todos os campos!");
+            return false;
+        }
+        return true;
+    }
+    function limparFormulario() {
+        document.getElementById("formCadastro").reset();
+    }
+    function enviarFormulario() {
+        if (validarFormulario()) {
+            alert("Formulário enviado (simulação).");
+            // aqui poderia ter código para enviar via fetch/XHR
+        }
+    }
+</script>
+
+</html>

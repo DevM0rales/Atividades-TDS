@@ -26,12 +26,10 @@ class GerenciadorContatos:
     def pesquisar_contato(self):
         nome_pesquisado = input("Qual contato você deseja pesquisar: ")
         
-        contatos = self.contatos
+        for contato in self.contatos:
+            pass
         
-        if nome_pesquisado in contatos.nome:
-            return print(contatos)
-        else:
-            return print('Não está salvo no seus contatos')
+        
 gerenciador = GerenciadorContatos()
 gerenciador.adicionar_contato(Contato("Ana Silva", "11987654321", "ana.silva@email.com"))
 gerenciador.adicionar_contato(Contato("Bruno Santos", "21912345678", "bruno.santos@email.com"))

@@ -78,7 +78,8 @@ class TelaSugestoes(Screen):
         self.filmes = {
             "Ação": ["John Wick", "Mad Max: Estrada da Fúria", "Gladiador"],
             "Comédia": ["As Branquelas", "Todo Mundo em Pânico", "O Máskara"],
-            "Animação": ["Toy Story", "Shrek", "Procurando Nemo"]
+            "Animação": ["Toy Story", "Shrek", "Procurando Nemo", "Gato de botas"],
+            "Terror": ["Invocação do mal", ]
         }
 
     def set_nome(self, nome):
